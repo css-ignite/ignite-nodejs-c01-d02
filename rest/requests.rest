@@ -1,0 +1,73 @@
+
+@baseUrl = http://localhost:3333
+
+GET {{baseUrl}}/users HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/users/3129f1f8-5902-45fa-bffe-ebf76f29dfb2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+POST {{baseUrl}}/users HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{ 
+	"name": "Danilo Vieira", 
+	"username": "danilo"
+}
+
+###
+
+PATCH {{baseUrl}}/users/2e201385-795d-4337-a6d6-6c81f6ad9656/pro HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/todos HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+username: danilo
+
+###
+
+POST {{baseUrl}}/todos HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+username: danilo
+
+{ 
+	"title": "Nome da tarefa"
+}
+
+###
+
+PUT {{baseUrl}}/todos/4fa2f4aa-19ea-4daf-a974-ca7e2804642 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+username: danilo
+
+{ 
+	"title": "Nome da tarefa",
+    "deadline": "2022-10-30"
+}
+
+###
+
+patch {{baseUrl}}/todos/4fa2f4aa-19ea-4daf-a974-ca7e28046420/done HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+username: danilo
+
+###
+
+delete {{baseUrl}}/todos/4fa2f4aa-19ea-4daf-a974-ca7e28046420 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+username: danilo

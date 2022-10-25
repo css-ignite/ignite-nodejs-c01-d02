@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "test": "jest",
-    "lint":"eslint"
+    "lint":"eslint src"
   },
   "dependencies": {
     "cors": "^2.8.5",
